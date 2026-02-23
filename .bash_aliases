@@ -50,7 +50,7 @@
 #export DEFAULTPS1=$PS1
 #export PS1="i\[\033[1;31m\]\u@\H\[\033[1;37m\]:\[\033[1;32m\]\w\n> \[$(tput sgr0)\]"
 
-# Ghostty shell integration for Bash. This should be at the top of your bashrc!
+# Ghostty shell integration for Bash. This should be at the top
 if [ -n "${GHOSTTY_RESOURCES_DIR}" ]; then
     builtin source "${GHOSTTY_RESOURCES_DIR}/shell-integration/bash/ghostty.bash"
 fi
@@ -88,14 +88,14 @@ export EDITOR=neovim
 #export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Starship install
-#curl -sS https://starship.rs/install.sh | sh
+# curl -sS https://starship.rs/install.sh | sh
 eval "$(starship init bash)"
 
 # Colorscript Gitlad @ "https://gitlab.com/dwt1/shell-color-scripts"
 # DistroTube's color-scripts install
-#git clone https://gitlab.com/dwt1/shell-color-scripts.git
-#cd shell-color-scripts
-#sudo make install
+# git clone https://gitlab.com/dwt1/shell-color-scripts.git
+# cd shell-color-scripts
+# sudo make install
 colorscript random
 
 # Circuitpython needs this path
@@ -125,7 +125,7 @@ alias ll='ls -alF' # LIST ALL with FILE extention
 
 alias lh='ls -d .* --color=auto' # List hidden
 
-alias hg='history | grep' # Usage: "hgrep [keyword]"
+alias hg='history | grep' # Search through .bash_history
 
 alias grep='grep --color=auto' # Adds color to grep output
 
