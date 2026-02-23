@@ -5,21 +5,26 @@
 cd
 
 # General Apps
-sudo apt install yt-dlp gelemental
+sudo apt install yt-dlp gelemental imagemagick gnome-tweaks
+
+# Install Discord
+# sudo apt install discord
 
 # Android SDK & friends
 #sudo apt install adb android-sdk android-sdk-build-tools android-sdk-common
 
 # Wireshark & traffic stuff
 # Try out GUI for Nmap (nmapsi4)
+# # Install Discord
+# sudo apt install discord
+
 sudo apt install -y wireshark wireshark-doc termshark tshark tcpspy
 
 # Sys Admin tools
 sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
 sudo apt update
 sudo apt install fastfetch tree xclip apache2
-sudo apt install  -y curl htop net-tools mlocate nmap elfutils ranger sshpass
-
+sudo apt install -y curl htop net-tools mlocate nmap elfutils ranger sshpass
 
 # Firewall & Security stuffs
 #sudo apt install firewalld checksec
@@ -29,12 +34,15 @@ sudo apt install -y nasm mc arduino cmake dnsenum bsdgames
 
 # install Vim & Friends
 sudo add-apt-repository ppa:neovim-ppa/unstable
-sudo apt-get update
-sudo apt-get install neovim fzf
-sudo apt install vim luarocks ripgrep tmux gopls npm cargo
+sudo apt update
+sudo apt install neovim fzf
+sudo apt install -y vim ripgrep tmux gopls npm cargo
 
 #Install Virtualbox
 sudo apt install -y virtualbox
+
+# Audio stuff
+sudo apt install -y audacity pulseaudio
 
 #GEF-GDB
 sudo apt install gdb
@@ -48,7 +56,7 @@ bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
 
 # install Brave Browser
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
 sudo apt install brave-browser
 
@@ -57,7 +65,6 @@ sudo apt install brave-browser
 
 # CAN communitation software
 #sudo apt-get install -y libsdl2-dev libsdl2-image-dev can-utils
-
 
 # SDR software
 #sudo apt install -y rtl-sdr cubicsdr gnuradio gnuradio-dev
@@ -91,6 +98,7 @@ sudo apt install -y docker.io docker-doc
 
 # Terminal stuff
 sudo apt install kitty timg fish
+
 # Zsh stuff... maybe better shell? still don't know yet.
 sudo apt install zsh zsh-doc zsh-autosuggestions zsh-syntax-highlighting
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -115,7 +123,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # Spacevim setup
 ## Should not be root when this is excecuted
 # sudo curl -sLf https://spacevim.org/install.sh | bash
-    # curl -sLf https://spacevim.org/install.sh | bash -s -- --uninstall # To uninstall Spacevim
+# curl -sLf https://spacevim.org/install.sh | bash -s -- --uninstall # To uninstall Spacevim
 
 # Starship setup
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
@@ -128,9 +136,9 @@ cd shell-color-scripts
 sudo make install
 # sudo make uninstall # To uninstall
 # zsh completion
-    # sudo cp completions/_colorscript /usr/share/zsh/site-functions
+# sudo cp completions/_colorscript /usr/share/zsh/site-functions
 # Fish completion
-    # sudo cp completions/colorscript.fish /usr/share/fish/vendor_completions.d
+# sudo cp completions/colorscript.fish /usr/share/fish/vendor_completions.d
 
 # Install my repos
 
@@ -143,7 +151,7 @@ sudo make install
 # Install Radare2
 #git clone https://github.com/radareorg/radare2
 #radare2/sys/install.sh
-    # Run 'make CS_COMMIT_ARCHIVE=1' to download capstone with wget/curl instead of git
+# Run 'make CS_COMMIT_ARCHIVE=1' to download capstone with wget/curl instead of git
 
 # Install Blender & Davinci Resolve
 sudo apt install blender
@@ -154,4 +162,3 @@ sudo apt install blender
 
 # Fun programs for fun scripts
 sudo apt install cowsay cmatrix lolcat
-
