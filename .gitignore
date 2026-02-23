@@ -1,5 +1,6 @@
 /*
 !.gitignore
+!.bashrc
 !.bash_aliases
 !.zshrc
 !apt_install.sh
