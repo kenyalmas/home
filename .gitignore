@@ -3,4 +3,5 @@
 !.bashrc
 !.bash_aliases
 !.zshrc
+!.aliases.zsh.bak
 !apt_install.sh
