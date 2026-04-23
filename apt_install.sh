@@ -5,7 +5,7 @@
 cd
 
 # General Apps
-sudo apt install yt-dlp gelemental imagemagick gnome-tweaks
+sudo apt install -y yt-dlp gelemental imagemagick gnome-tweaks
 
 # Install Discord
 # sudo apt install discord
@@ -15,15 +15,13 @@ sudo apt install yt-dlp gelemental imagemagick gnome-tweaks
 
 # Wireshark & traffic stuff
 # Try out GUI for Nmap (nmapsi4)
-# # Install Discord
-# sudo apt install discord
 
 sudo apt install -y wireshark wireshark-doc termshark tshark tcpspy
 
 # Sys Admin tools
 sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
 sudo apt update
-sudo apt install fastfetch tree xclip apache2
+sudo apt install -y fastfetch tree xclip apache2
 sudo apt install -y curl htop net-tools mlocate nmap elfutils ranger sshpass
 
 # Firewall & Security stuffs
@@ -35,17 +33,17 @@ sudo apt install -y nasm mc arduino cmake dnsenum bsdgames
 # install Vim & Friends
 sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt update
-sudo apt install neovim fzf
+sudo apt install-y neovim fzf
 sudo apt install -y vim ripgrep tmux gopls npm cargo
 
 #Install Virtualbox
-sudo apt install -y virtualbox
+#sudo apt install -y virtualbox
 
 # Audio stuff
 sudo apt install -y audacity pulseaudio
 
 #GEF-GDB
-sudo apt install gdb
+sudo apt install -y gdb
 bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
 
 # Install Javascript stuff
@@ -55,10 +53,10 @@ bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
 # nativefier "https://wiki.archlinux.org/" --name "arch_Wiki" ; Builds chromium "App" of the Arch Wiki for easy access of linux documentation
 
 # install Brave Browser
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt update
-sudo apt install brave-browser
+#sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+#echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+#sudo apt update
+#sudo apt install brave-browser
 
 # 6502 Development / Emulator
 #sudo apt install cc65 fceux
@@ -73,34 +71,36 @@ sudo apt install brave-browser
 #echo 'blacklist dvb_usb_rtl28xxu' | sudo tee – append /etc/modprobe.d/blacklist-dvb_usb_rtl28xxu.conf
 
 # Hardware Monitoring
-sudo apt install -y lm-sensors i7z hardinfo psensor
+#sudo apt install -y lm-sensors i7z hardinfo psensor
 
 # Bettercap dependencies
 #sudo apt install -y build-essential libpcap-dev libusb-1.0-0-dev libnetfilter-queue-dev
 
 # Python stuff
-sudo apt install -y python3.11 python3.11-venv python-is-python3 bpython python3-pip python3-flask
+#sudo apt install -y python3.12 python3.12-venv python-is-python3 bpython python3-pip python3-flask
 # Pip doesn't like installing through root FYI
 #pip3 install pwntools sympy scapy oathtool
 export PATH=$PATH:$HOME/.local/bin
 
 # python tools helpful outside python
-sudo apt install gettext uncrustify
+sudo apt install -y gettext uncrustify
 
 # Circuitpython build tools
-sudo add-apt-repository ppa:pybricks/ppa
+#sudo add-apt-repository ppa:pybricks/ppa
 
 # Install git tools
-sudo apt install -y git gh
+sudo apt install -y git
+#sudo apt install -y gh
 
 # Docker (check /root/.docker/config.json for privesc)
 sudo apt install -y docker.io docker-doc
 
 # Terminal stuff
-sudo apt install kitty timg fish
+#sudo apt install kitty fish
+sudo apt install -y timg
 
 # Zsh stuff... maybe better shell? still don't know yet.
-sudo apt install zsh zsh-doc zsh-autosuggestions zsh-syntax-highlighting
+sudo apt install -y zsh zsh-doc
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Needs permissions for monitoring software
@@ -126,7 +126,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # curl -sLf https://spacevim.org/install.sh | bash -s -- --uninstall # To uninstall Spacevim
 
 # Starship setup
-sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+#sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 # Install colorscripts for the terminal art
 mkdir ~/Git/
@@ -154,11 +154,11 @@ sudo make install
 # Run 'make CS_COMMIT_ARCHIVE=1' to download capstone with wget/curl instead of git
 
 # Install Blender & Davinci Resolve
-sudo apt install blender
+#sudo apt install blender
 # Davinci Dependants
 # sudo apt install libssl3 ocl-icd-opencl-dev fakeroot xorriso
 # Install Resolve From "https://www.blackmagicdesign.com/products/davinciresolve/"
 # Extract to ~/bin/
 
 # Fun programs for fun scripts
-sudo apt install cowsay cmatrix lolcat
+sudo apt install -y cowsay cmatrix lolcat
