@@ -92,12 +92,13 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
  export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
- else
-   export EDITOR='nvim'
- fi
+# Prefer Neovim for local and remote sessions, falling back to Vim.
+if (( $+commands[nvim] )); then
+  export EDITOR='nvim'
+else
+  export EDITOR='vim'
+fi
+export VISUAL="$EDITOR"
 
 # Compilation flags
  export ARCHFLAGS="-arch $(uname -m)"
@@ -106,7 +107,7 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
 # users are encouraged to define aliases within a top-level file in
 # the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-source $ZSH_CUSTOM/aliases.zsh
+# Oh My Zsh automatically loads "$ZSH_CUSTOM/aliases.zsh".
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 # Starship prompt
@@ -114,3 +115,6 @@ eval "$(starship init zsh)"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Launch Zen in the background, detached from this terminal.
+alias zen='nohup "$HOME/bin/zen/zen" </dev/null >/dev/null 2>&1 &!'
